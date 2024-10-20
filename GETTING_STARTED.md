@@ -50,11 +50,11 @@ Fork the Repository:
 **To start the eMbewu app, follow these steps:**
 
 - Navigate to the Project Directory:
-
+    ```bash
     cd eMbewu
 
 - Run the eMbewu App:
-
+    ```bash
     reflex run
 
 - Open Your Browser:
@@ -68,7 +68,6 @@ Visit http://localhost:3000 to see the eMbewu app in action.
 
 Ensure you have activated your virtual environment.
 
-Verify all required packages are installed by running pip install -r requirements.txt if available.
 
 **Server Issues:**
 
@@ -78,5 +77,6 @@ Ensure no other applications are using port 3000.
 
 If you encounter any issues, please open an issue on the GitHub issues page and *please hesitate to contact us.*
 
-Contributing
-We welcome contributions! Please see the CONTRIBUTING.md file for more details on how to contribute to eMbewu.
+**Contributing**
+
+See the CONTRIBUTING.md file for more details on how to contribute to eMbewu.
