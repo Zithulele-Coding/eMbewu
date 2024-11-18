@@ -19,7 +19,6 @@ def index() -> rx.Component:
             rx.heading("Welcome Zithulele Coders!", size="9"),
             rx.text(
                 "Watch this space...",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
                 size="5",
             ),
             spacing="5",
