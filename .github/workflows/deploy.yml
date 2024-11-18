@@ -10,7 +10,6 @@ env:
 
 jobs:
     deploy:
-        needs: publish
         name: deploy image
         runs-on: ubuntu-latest
 
