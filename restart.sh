@@ -9,7 +9,6 @@ tmux send-keys -t eMbewu:0 C-c
 # Start new process
 tmux send-keys -t eMbewu:0 "\
 source ./venv/bin/activate && \
-git pull && \
 pip install -r requirements.txt && \
 reflex run --env prod" C-m
 
