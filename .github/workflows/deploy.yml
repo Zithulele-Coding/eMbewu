@@ -2,7 +2,7 @@ name: publish
 
 on:
   push:
-    branches: [ "12-add-deployment-setup" ]
+    branches: [ "main" ]
 
 env:
   WORK_DIR: eMbewu
@@ -14,14 +14,14 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: install ssh keys
+        - name: Install ssh keys
           # check this thread to understand why its needed:
           # <https://stackoverflow.com/a/70447517>
           run: |
             install -m 600 -D /dev/null ~/.ssh/id_rsa
             echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
             ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
-        - name: connect and pull
+        - name: Deploy via ssh
           run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ env.WORK_DIR }} && sh ${{ env.RESTART_SCRIPT }} && exit"
-        - name: cleanup
+        - name: Cleanup
           run: rm -rf ~/.ssh
