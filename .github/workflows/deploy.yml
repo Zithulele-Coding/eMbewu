@@ -10,7 +10,7 @@ env:
 
 jobs:
     deploy:
-        name: deploy image
+        name: Deploy
         runs-on: ubuntu-latest
 
         steps:
