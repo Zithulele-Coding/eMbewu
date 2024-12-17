@@ -3,7 +3,15 @@ from sqlalchemy.orm import sessionmaker
 from eMbewu import Base, DBProduct  # Import your models
 
 # Database connection
-DATABASE_URL = "postgresql://coffeedb_owner:JEvnWBFp67xV@ep-still-flower-a54nulqa.us-east-2.aws.neon.tech/coffeedb?sslmode=require"
+# Database setup
+DB_HOST = "vaneck.app"
+DB_PORT = 5432
+DB_USER = "zicoder"
+DB_NAME = "embewu"
+DB_PASSWORD = "molo_unjani?"
+
+# Construct the database URL
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
 
