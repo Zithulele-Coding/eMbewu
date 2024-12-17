@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: zicoder
+      POSTGRES_PASSWORD: molo_unjani?
+      POSTGRES_DB: embewu
+    volumes:
+      - data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  data:
